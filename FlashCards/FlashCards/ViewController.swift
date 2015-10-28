@@ -88,6 +88,37 @@ class ViewController: UIViewController {
         botonBien.enabled = false;
         botonMal.enabled = false;
     }
+
+    
+    // Reiniciar el interfaz de usuario al agitar el dispositivo
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.becomeFirstResponder()
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
+        if event!.subtype == UIEventSubtype.MotionShake {
+            
+            // Puesta a cero de los marcadores
+            correctas = 0
+            incorrectas = 0
+            etiquetaBien.text = String(correctas)
+            etiquetaMal.text = String(incorrectas)
+            
+            // Mostrar una pregunta al azar
+            aleatorio = Int(arc4random_uniform(UInt32(tarjetas.getNumPreguntas())))
+            etiquetaPregunta.text = tarjetas.getPregunta(aleatorio)
+            etiquetaRespuesta.text = ""
+            
+            // Desactivar los botones
+            botonBien.enabled = false;
+            botonMal.enabled = false;
+        }
+    }
     
 }
 
