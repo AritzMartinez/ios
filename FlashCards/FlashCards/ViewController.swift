@@ -43,7 +43,6 @@ class ViewController: UIViewController {
         // Desactivar los botones de respuesta
         botonBien.enabled = false;
         botonMal.enabled = false;
-    
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,6 +50,44 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func botonMostrar(sender: UIButton) {
+        // Mostrar la respuesta
+        etiquetaRespuesta.text = tarjetas.getRespuesta(aleatorio)
+        
+        // Activar los botones
+        botonBien.enabled = true;
+        botonMal.enabled = true;
+    }
 
+    @IBAction func botonBien(sender: UIButton) {
+        // Sumar 1
+        correctas++;
+        etiquetaBien.text = String(correctas)
+        
+        // Mostrar una pregunta al azar
+        aleatorio = Int(arc4random_uniform(UInt32(tarjetas.getNumPreguntas())))
+        etiquetaPregunta.text = tarjetas.getPregunta(aleatorio)
+        etiquetaRespuesta.text = ""
+        
+        // Desactivar los botones
+        botonBien.enabled = false;
+        botonMal.enabled = false;
+    }
+    
+    @IBAction func botonMal(sender: UIButton) {
+        // Sumar 1
+        incorrectas++;
+        etiquetaMal.text = String(incorrectas)
+        
+        // Mostrar una pregunta al azar
+        aleatorio = Int(arc4random_uniform(UInt32(tarjetas.getNumPreguntas())))
+        etiquetaPregunta.text = tarjetas.getPregunta(aleatorio)
+        etiquetaRespuesta.text = ""
+        
+        // Desactivar los botones
+        botonBien.enabled = false;
+        botonMal.enabled = false;
+    }
+    
 }
 

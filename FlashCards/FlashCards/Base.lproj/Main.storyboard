@@ -29,11 +29,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0P-17-hnx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0P-17-hnx" userLabel="botonMostrar">
                                 <rect key="frame" x="249" y="196" width="102" height="48"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Mostrar"/>
+                                <connections>
+                                    <action selector="botonMostrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D25-Wb-uzK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNz-MS-Zm6" userLabel="etiquetaRespuesta">
                                 <rect key="frame" x="20" y="260" width="560" height="144"/>
@@ -54,12 +57,18 @@
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Correcto"/>
+                                        <connections>
+                                            <action selector="botonBien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFU-fT-Kq4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAm-aC-Gmx" userLabel="botonMal">
                                         <rect key="frame" x="147" y="0.0" width="134" height="48"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Incorrecto"/>
+                                        <connections>
+                                            <action selector="botonMal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GEs-d1-UMs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
