@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="猫" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPc-dW-kvM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="猫" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPc-dW-kvM" userLabel="etiquetaPregunta">
                                 <rect key="frame" x="20" y="36" width="560" height="144"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -35,7 +35,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Mostrar"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNz-MS-Zm6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNz-MS-Zm6" userLabel="etiquetaRespuesta">
                                 <rect key="frame" x="20" y="260" width="560" height="144"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -49,13 +49,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="aeV-Qv-f5U">
                                 <rect key="frame" x="160" y="420" width="281" height="48"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xx-ID-MIw">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xx-ID-MIw" userLabel="botonBien">
                                         <rect key="frame" x="0.0" y="0.0" width="115" height="48"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Correcto"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAm-aC-Gmx">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAm-aC-Gmx" userLabel="botonMal">
                                         <rect key="frame" x="147" y="0.0" width="134" height="48"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -64,8 +64,8 @@
                                 </subviews>
                                 <animations/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="Q4L-in-aPe">
-                                <rect key="frame" x="237" y="507" width="188" height="61"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="Q4L-in-aPe">
+                                <rect key="frame" x="206" y="507" width="188" height="61"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iK8-rs-j7T" userLabel="etiquetaBien">
                                         <rect key="frame" x="0.0" y="0.0" width="62" height="61"/>
@@ -74,7 +74,7 @@
                                         <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7a-2N-OXY" userLabel="etiquetaMal">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7a-2N-OXY" userLabel="etiquetaMal">
                                         <rect key="frame" x="126" y="0.0" width="62" height="61"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="51"/>
@@ -110,6 +110,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="botonBien" destination="9xx-ID-MIw" id="FcM-7i-hFG"/>
+                        <outlet property="botonMal" destination="PAm-aC-Gmx" id="lWz-jG-UTa"/>
+                        <outlet property="etiquetaBien" destination="iK8-rs-j7T" id="aHa-rp-Vji"/>
+                        <outlet property="etiquetaMal" destination="W7a-2N-OXY" id="caq-6l-iJD"/>
+                        <outlet property="etiquetaPregunta" destination="RPc-dW-kvM" id="BDA-fV-1u0"/>
+                        <outlet property="etiquetaRespuesta" destination="FNz-MS-Zm6" id="cuN-fF-Bai"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
