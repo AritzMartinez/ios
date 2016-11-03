@@ -17,7 +17,7 @@ class Tarjetas {
         ("月","luna"),
         ("猫","gato"),
         ("狗","perro"),
-    ]
+        ]
     
     func getPregunta( numero: Int ) -> String {
         return preguntas[numero].0
@@ -30,5 +30,5 @@ class Tarjetas {
     func getNumPreguntas() -> Int {
         return preguntas.count
     }
-
+    
 }

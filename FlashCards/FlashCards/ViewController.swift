@@ -37,12 +37,12 @@ class ViewController: UIViewController {
         
         // Mostrar una pregunta al azar
         aleatorio = Int(arc4random_uniform(UInt32(tarjetas.getNumPreguntas())))
-        etiquetaPregunta.text = tarjetas.getPregunta(aleatorio)
+        etiquetaPregunta.text = tarjetas.getPregunta(numero: aleatorio)
         etiquetaRespuesta.text = ""
         
         // Desactivar los botones de respuesta
-        botonBien.enabled = false;
-        botonMal.enabled = false;
+        botonBien.isEnabled = false;
+        botonMal.isEnabled = false;
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,58 +50,58 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func botonMostrar(sender: UIButton) {
+    @IBAction func botonMostrar(_ sender: UIButton) {
         // Mostrar la respuesta
-        etiquetaRespuesta.text = tarjetas.getRespuesta(aleatorio)
+        etiquetaRespuesta.text = tarjetas.getRespuesta(numero:aleatorio)
         
         // Activar los botones
-        botonBien.enabled = true;
-        botonMal.enabled = true;
+        botonBien.isEnabled = true;
+        botonMal.isEnabled = true;
     }
 
-    @IBAction func botonBien(sender: UIButton) {
+    @IBAction func botonBien(_ sender: UIButton) {
         // Sumar 1
-        correctas++;
+        correctas += 1;
         etiquetaBien.text = String(correctas)
         
         // Mostrar una pregunta al azar
         aleatorio = Int(arc4random_uniform(UInt32(tarjetas.getNumPreguntas())))
-        etiquetaPregunta.text = tarjetas.getPregunta(aleatorio)
+        etiquetaPregunta.text = tarjetas.getPregunta(numero:aleatorio)
         etiquetaRespuesta.text = ""
         
         // Desactivar los botones
-        botonBien.enabled = false;
-        botonMal.enabled = false;
+        botonBien.isEnabled = false;
+        botonMal.isEnabled = false;
     }
     
-    @IBAction func botonMal(sender: UIButton) {
+    @IBAction func botonMal(_ sender: UIButton) {
         // Sumar 1
-        incorrectas++;
+        incorrectas += 1;
         etiquetaMal.text = String(incorrectas)
         
         // Mostrar una pregunta al azar
         aleatorio = Int(arc4random_uniform(UInt32(tarjetas.getNumPreguntas())))
-        etiquetaPregunta.text = tarjetas.getPregunta(aleatorio)
+        etiquetaPregunta.text = tarjetas.getPregunta(numero:aleatorio)
         etiquetaRespuesta.text = ""
         
         // Desactivar los botones
-        botonBien.enabled = false;
-        botonMal.enabled = false;
+        botonBien.isEnabled = false;
+        botonMal.isEnabled = false;
     }
 
     
     // Reiniciar el interfaz de usuario al agitar el dispositivo
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.becomeFirstResponder()
     }
     
-    override func canBecomeFirstResponder() -> Bool {
+    override var canBecomeFirstResponder : Bool {
         return true
     }
     
-    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent?) {
-        if event!.subtype == UIEventSubtype.MotionShake {
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event!.subtype == UIEventSubtype.motionShake {
             
             // Puesta a cero de los marcadores
             correctas = 0
@@ -111,12 +111,12 @@ class ViewController: UIViewController {
             
             // Mostrar una pregunta al azar
             aleatorio = Int(arc4random_uniform(UInt32(tarjetas.getNumPreguntas())))
-            etiquetaPregunta.text = tarjetas.getPregunta(aleatorio)
+            etiquetaPregunta.text = tarjetas.getPregunta(numero:aleatorio)
             etiquetaRespuesta.text = ""
             
             // Desactivar los botones
-            botonBien.enabled = false;
-            botonMal.enabled = false;
+            botonBien.isEnabled = false;
+            botonMal.isEnabled = false;
         }
     }
     
