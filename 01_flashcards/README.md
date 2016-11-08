@@ -1,6 +1,4 @@
-# PROGMM2016
-
-## Flashcards
+# Flashcards
 
 Ejemplo de una aplicación para memorizar palabras en chino usando tarjetas.
 
