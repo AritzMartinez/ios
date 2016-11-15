@@ -43,8 +43,8 @@ class ViewController: UIViewController {
         etiquetaAltura.text = String(format: "%.2f m", a)
         let p = peso.value
         etiquetaPeso.text = String(format: "%.1f Kg", p)
-        let imc = p/(a*a);
-        etiquetaIMC.text = String(format: "%.1f", p/a/a)
+        let imc = p/(a*a)
+        etiquetaIMC.text = String(format: "%.1f", imc)
         
         switch imc {
         case let i where i < 18.5:
