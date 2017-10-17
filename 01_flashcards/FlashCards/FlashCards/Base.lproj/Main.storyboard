@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C32f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,87 +22,95 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="猫" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPc-dW-kvM" userLabel="etiquetaPregunta">
-                                <rect key="frame" x="16" y="36" width="343" height="144"/>
-                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="144" id="ZKg-7h-oXH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0P-17-hnx" userLabel="botonMostrar">
-                                <rect key="frame" x="136.5" y="196" width="102" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Mostrar"/>
-                                <connections>
-                                    <action selector="botonMostrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D25-Wb-uzK"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="gato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNz-MS-Zm6" userLabel="etiquetaRespuesta">
-                                <rect key="frame" x="16" y="260" width="343" height="144"/>
-                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="144" id="mYR-0c-D4I"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="aeV-Qv-f5U" userLabel="botones">
-                                <rect key="frame" x="47" y="420" width="281" height="48"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Fju-aO-K1b">
+                                <rect key="frame" x="16" y="96" width="343" height="475.5"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xx-ID-MIw" userLabel="botonBien">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Correcto"/>
-                                        <connections>
-                                            <action selector="botonBien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFU-fT-Kq4"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAm-aC-Gmx" userLabel="botonMal">
-                                        <rect key="frame" x="147" y="0.0" width="134" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Incorrecto"/>
-                                        <connections>
-                                            <action selector="botonMal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GEs-d1-UMs"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="Q4L-in-aPe" userLabel="marcador">
-                                <rect key="frame" x="93.5" y="574" width="188" height="61"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iK8-rs-j7T" userLabel="etiquetaBien">
-                                        <rect key="frame" x="0.0" y="0.0" width="62" height="61"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="51"/>
-                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="猫" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPc-dW-kvM" userLabel="etiquetaPregunta">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="144"/>
+                                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="144" id="ZKg-7h-oXH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7a-2N-OXY" userLabel="etiquetaMal">
-                                        <rect key="frame" x="126" y="0.0" width="62" height="61"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="51"/>
-                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0P-17-hnx" userLabel="botonMostrar">
+                                        <rect key="frame" x="131" y="160" width="81" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="MOSTRAR"/>
+                                        <connections>
+                                            <action selector="botonMostrar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D25-Wb-uzK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNz-MS-Zm6" userLabel="etiquetaRespuesta">
+                                        <rect key="frame" x="0.0" y="209" width="343" height="144"/>
+                                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="144" id="mYR-0c-D4I"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="aeV-Qv-f5U" userLabel="botones">
+                                        <rect key="frame" x="57" y="369" width="229" height="106.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="i5b-HH-TZi">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="106.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xx-ID-MIw" userLabel="botonBien">
+                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="33"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="CORRECTO"/>
+                                                        <connections>
+                                                            <action selector="botonBien:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFU-fT-Kq4"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iK8-rs-j7T" userLabel="etiquetaBien">
+                                                        <rect key="frame" x="0.0" y="49" width="90" height="57.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                                        <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2F8-uX-ifG">
+                                                <rect key="frame" x="122" y="0.0" width="107" height="106.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAm-aC-Gmx" userLabel="botonMal">
+                                                        <rect key="frame" x="0.0" y="0.0" width="107" height="33"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="INCORRECTO"/>
+                                                        <connections>
+                                                            <action selector="botonMal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GEs-d1-UMs"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7a-2N-OXY" userLabel="etiquetaMal">
+                                                        <rect key="frame" x="0.0" y="49" width="107" height="57.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="RPc-dW-kvM" firstAttribute="leading" secondItem="Fju-aO-K1b" secondAttribute="leading" id="7Bs-8B-CJQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="FNz-MS-Zm6" secondAttribute="trailing" id="Tyy-nc-yrr"/>
+                                    <constraint firstItem="FNz-MS-Zm6" firstAttribute="leading" secondItem="Fju-aO-K1b" secondAttribute="leading" id="rIO-89-nbb"/>
+                                    <constraint firstAttribute="trailing" secondItem="RPc-dW-kvM" secondAttribute="trailing" id="xBf-J2-nsJ"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FNz-MS-Zm6" firstAttribute="top" secondItem="E0P-17-hnx" secondAttribute="bottom" constant="16" id="6ds-FN-V5A"/>
-                            <constraint firstItem="E0P-17-hnx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H3b-NQ-SPn"/>
-                            <constraint firstItem="aeV-Qv-f5U" firstAttribute="top" secondItem="FNz-MS-Zm6" secondAttribute="bottom" constant="16" id="M6y-Af-1Gf"/>
-                            <constraint firstItem="FNz-MS-Zm6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aUS-rc-gof"/>
-                            <constraint firstItem="E0P-17-hnx" firstAttribute="top" secondItem="RPc-dW-kvM" secondAttribute="bottom" constant="16" id="cjQ-qE-TgL"/>
-                            <constraint firstItem="RPc-dW-kvM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fdt-sv-RlQ"/>
-                            <constraint firstItem="Q4L-in-aPe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jNT-fB-jiz"/>
-                            <constraint firstItem="aeV-Qv-f5U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nYw-Xr-NZa"/>
-                            <constraint firstItem="RPc-dW-kvM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="pAV-Br-QFA"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Q4L-in-aPe" secondAttribute="bottom" constant="32" id="pqT-aO-PB3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FNz-MS-Zm6" secondAttribute="trailing" id="rHg-Ki-JVf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RPc-dW-kvM" secondAttribute="trailing" id="tjD-m2-mgD"/>
+                            <constraint firstItem="Fju-aO-K1b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Do7-n0-UPy"/>
+                            <constraint firstItem="Fju-aO-K1b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UEc-Ky-oEV"/>
+                            <constraint firstItem="Fju-aO-K1b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e7k-Et-njh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fju-aO-K1b" secondAttribute="trailing" id="zzb-mT-cmo"/>
                         </constraints>
                     </view>
                     <connections>

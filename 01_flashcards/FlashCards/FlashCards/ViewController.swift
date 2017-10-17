@@ -22,13 +22,13 @@ class ViewController: UIViewController {
     var aleatorio = 0
     
     // Modelo
-    let tarjetas = Tarjetas()
+    let tarjetas = Mazo()
     
     // Marcador
     var correctas = 0
     var incorrectas = 0
     
-    // Mostrar una pregunta al azar
+    /// Mostrar una pregunta al azar
     func nuevaPregunta() {
         // Valor aleatorio entre 0 y tarjetas.count
         aleatorio = Int(arc4random_uniform(UInt32(tarjetas.count)))
@@ -38,13 +38,13 @@ class ViewController: UIViewController {
         etiquetaRespuesta.text = ""
     }
     
-    // Desactivar los botones de respuesta
+    /// Desactivar los botones de respuesta
     func botonesRespuesta( activados: Bool ) {
         botonBien.isEnabled = activados;
         botonMal.isEnabled = activados;
     }
     
-    // Actualizar los dos marcadores
+    /// Actualizar los dos marcadores
     func actualizarMarcador() {
         etiquetaBien.text = String(correctas)
         etiquetaMal.text = String(incorrectas)
@@ -63,15 +63,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /// Mostrar la respuesta y activar los botones de bien/mal
     @IBAction func botonMostrar(_ sender: UIButton) {
         // Mostrar la respuesta
         etiquetaRespuesta.text = tarjetas[aleatorio].reverso
         
         botonesRespuesta(activados: true)
     }
-    
+
+    /// Sumar 1 a las acertadas y reiniciar el juego
     @IBAction func botonBien(_ sender: UIButton) {
-        // Sumar 1
         correctas += 1;
         
         actualizarMarcador()
@@ -79,8 +80,8 @@ class ViewController: UIViewController {
         botonesRespuesta(activados: false)
     }
     
+    /// Sumar 1 a las fallidas y reiniciar el juego
     @IBAction func botonMal(_ sender: UIButton) {
-        // Sumar 1
         incorrectas += 1;
         
         actualizarMarcador()
@@ -88,7 +89,7 @@ class ViewController: UIViewController {
         botonesRespuesta(activados: false)
     }
     
-    // Reiniciar el interfaz de usuario al agitar el dispositivo
+    // MARK: Reiniciar el interfaz de usuario al agitar el dispositivo
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.becomeFirstResponder()
