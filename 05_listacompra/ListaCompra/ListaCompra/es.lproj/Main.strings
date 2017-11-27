@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "¿Qué te falta?"; ObjectID = "2Uu-hv-aZR"; */
+"2Uu-hv-aZR.text" = "¿Qué te falta?";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "AUu-FX-VAi"; */
+"AUu-FX-VAi.title" = "Item";
+
+/* Class = "UIButton"; normalTitle = "Completar"; ObjectID = "KJ3-qD-8OV"; */
+"KJ3-qD-8OV.normalTitle" = "Completado";
+
+/* Class = "UINavigationItem"; title = "Lista de la compra"; ObjectID = "LWW-Yb-zF7"; */
+"LWW-Yb-zF7.title" = "Lista de la compra";
+
+/* Class = "UITextField"; placeholder = "Chocolate, yogures, pizza..."; ObjectID = "RWf-oL-h39"; */
+"RWf-oL-h39.placeholder" = "Chocolate, yogures, pizza...";
+
+/* Class = "UINavigationItem"; title = "Nuevo item"; ObjectID = "e9T-5U-bLt"; */
+"e9T-5U-bLt.title" = "Nuevo item";
+
+/* Class = "UILabel"; text = "Item"; ObjectID = "irn-t8-bwY"; */
+"irn-t8-bwY.text" = "Item";
